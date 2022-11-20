@@ -12,3 +12,9 @@ add_executable(${PROJECT_NAME})
 
 # add the source files to build
 target_sources(${PROJECT_NAME} PRIVATE helloworld.cpp)
+
+install(
+    TARGETS ${PROJECT_NAME}
+    EXPORT ${PROJECT_NAME}
+    
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
