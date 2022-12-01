@@ -27,3 +27,7 @@ installAfterBuild:
 .PHONY: build-trace
 build-trace:
 	cmake build --trace-source="CMakeLists.txt"
+	
+.PHONY: run-tests
+run-tests:
+	cd build/test && ctest
