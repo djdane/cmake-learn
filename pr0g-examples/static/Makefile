@@ -11,7 +11,7 @@ build-lib:
 	
 .PHONY: configure-app
 configure-app:
-	cd application && cmake -B build -DCMAKE_INSTALL_PREFIX=../install -DCMAKE_PREFIX_PATH=$(pwd)/../install/lib/cmake/calculator-static #todo: ignored?
+	cd application && cmake -B build -DCMAKE_INSTALL_PREFIX=../install -DCMAKE_PREFIX_PATH="$(pwd)/../install/lib/cmake/calculator-static"
 
 .PHONY: build-app
 build-app:

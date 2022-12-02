@@ -26,10 +26,6 @@ if(NULL)
 	install_it(${DEV_LIB_DIR})
 endif()
 
-#todo: figure out why not: -DCMAKE_PREFIX_PATH=$(pwd)/../install/
-set(calculator-static_DIR ${CMAKE_SOURCE_DIR}/../install/lib/cmake/calculator-static)
-MESSAGE(WARNING ${calculator-static_DIR})
-
 find_package(calculator-static REQUIRED CONFIG)
 
 add_executable(${PROJECT_NAME})
